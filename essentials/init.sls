@@ -1,9 +1,8 @@
-vim:
-  pkg:
-    - installed
+include:
+  - essentials.sudo
+  - essentials.users
 
-# @todo: add user and /etc/sudors config file modifications
-sudo:
+vim:
   pkg:
     - installed
 

@@ -1,4 +1,7 @@
-btrfs-utils:
+include:
+  - btrfs.snapper
+
+btrfs-progs:
   pkg:
     - installed
 
@@ -7,10 +10,3 @@ cronie:
     - installed
   service:
       - running
-
-# @todo: do the initial config settings for all volumes
-snapper:
-  pkg:
-    - installed
-    - require:
-      - pkg: cronie 
