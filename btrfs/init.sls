@@ -10,3 +10,5 @@ cronie:
     - installed
   service:
       - running
+      - require:
+        - pkg: cronie
