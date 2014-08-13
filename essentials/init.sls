@@ -10,6 +10,10 @@ tmux:
   pkg:
     - installed
 
+wget:
+  pkg:
+    - installed
+
 whois:
   pkg:
     - installed
