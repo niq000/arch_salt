@@ -6,6 +6,10 @@ gvim:
   pkg:
     - installed
 
+stow:
+  pkg:
+    - installed
+
 tmux:
   pkg:
     - installed
