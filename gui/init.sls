@@ -19,7 +19,8 @@ gdm:
     - require:
       - pkg: gnome-shell
   service:
-      - running
+      - dead
+      - enable: False
       - require:
         - pkg: gdm
 
@@ -35,7 +36,7 @@ pidgin-otr:
     - require:
       - pkg: pidgin
 
-libreoffice:
+libreoffice-gnome:
   pkg:
     - installed
     - require:
@@ -76,3 +77,15 @@ shotwell:
     - installed
     - require:
       - pkg: xorg-server
+
+wireshark-gtk:
+  pkg:
+    - installed
+    - require:
+      - pkg: xorg-server
+
+add-user-wireshark-group:
+  cmd.run:
+    - name: usermod -a nick -G wireshark
+    - require:
+      - pkg: wireshark-gtk
