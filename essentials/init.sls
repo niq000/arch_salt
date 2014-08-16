@@ -2,7 +2,7 @@ include:
   - essentials.sudo
   - essentials.users
 
-vim:
+gvim:
   pkg:
     - installed
 
